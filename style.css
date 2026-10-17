@@ -1,0 +1,13 @@
+html,body{margin:0;height:100%;background:rgb(50,50,50)}
+nav{height:60px;background:rgb(100,100,100);display:flex;align-items:center;gap:10px;padding:0 16px}
+nav a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:'Roboto Mono',monospace;font-size:18px}
+.material-symbols-outlined{font-size:28px}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;background:rgb(70,70,70);border-radius:8px;padding:0 12px;height:36px;color:#fff}
+.search input{background:none;border:0;outline:0;color:#fff;font-family:'Roboto Mono',monospace;font-size:14px;width:200px}
+.search input::placeholder{color:rgb(170,170,170)}
+.search .material-symbols-outlined{font-size:20px}
+aside{position:fixed;top:60px;left:0;bottom:0;width:220px;background:rgb(100,100,100)}
+aside a{display:block;padding:12px 20px;color:#fff;text-decoration:none;font-family:'Roboto Mono',monospace;font-size:15px}
+aside a:hover{background:rgb(120,120,120)}
+aside .section{padding:12px 20px 6px;color:#fff;font-family:'Roboto Mono',monospace;font-size:15px;font-weight:700}
+aside a.chapter{padding:8px 20px 8px 36px;font-size:14px;color:rgb(225,225,225)}
