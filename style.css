@@ -18,3 +18,5 @@ a.repo .name{font-weight:700;font-size:16px}
 a.repo .desc{margin-top:6px;font-size:13px;color:rgb(215,215,215)}
 div.page{margin-left:220px;padding:32px;color:#fff;font-family:'Roboto Mono',monospace}
 div.page h1{margin:0;font-size:32px}
+aside a.active{background:rgb(120,120,120);color:#fff}
+aside{overflow-y:auto}
