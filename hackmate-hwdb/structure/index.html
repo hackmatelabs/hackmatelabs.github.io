@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Structure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<div class="section">Logs</div>
+<a class="chapter active" href="./">Structure</a>
+<a class="chapter" href="../submit-a-log/">Submit a Log</a>
+</aside>
+<div class="page">
+<h1>Structure</h1>
+<p>The top level is split by which hackmate feature you used, since different modes have different failure points:</p>
+<ul>
+<li><code>full-build-logs/</code> Full Build (fresh USB, format + everything)</li>
+<li><code>already-formatted-logs/</code> Already Formatted mode</li>
+<li><code>repair-efi-logs/</code> Repair EFI mode</li>
+<li><code>no-usb-logs/</code> EFI folder output, no USB</li>
+<li><code>dual-boot-logs/</code> Dual Boot setup</li>
+<li><code>efi-health-check-logs/</code> standalone EFI Health Check</li>
+</ul>
+<p>Inside each of those, logs are split by CPU generation (<code>intel-gen7</code>, <code>amd-zen3</code>, and so on), matching hackmate's own compat tiers.</p>
+</div></body></html>

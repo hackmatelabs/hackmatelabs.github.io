@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Windows</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<a class="chapter" href="../supported-hardware/">Supported Hardware</a>
+<div class="section">Installation</div>
+<a class="chapter" href="../linux-macos/">Linux and macOS</a>
+<a class="chapter active" href="./">Windows</a>
+<a class="chapter" href="../gui/">GUI</a>
+<div class="section">Usage</div>
+<a class="chapter" href="../what-it-does/">What It Does</a>
+<a class="chapter" href="../after-install/">After Install</a>
+<div class="section">Help</div>
+<a class="chapter" href="../faq/">FAQ</a>
+</aside>
+<div class="page">
+<h1>Windows</h1>
+<h2>Exe (easiest)</h2>
+<p>Download <code>HackMate.exe</code> from the <a href="https://github.com/hackmatelabs/hackmate/releases/latest">latest release</a> and run it as administrator. No Python, venv or setup needed.</p>
+<p class="note">Some antivirus engines (Bkav, GridinSoft, Zillya) flag the exe. This is a known false positive with PyInstaller-built executables. Defender, Kaspersky, ESET, CrowdStrike and Sophos report it clean, and the exe is built from source on GitHub Actions if you want to check the <a href="https://github.com/hackmatelabs/hackmate/actions/workflows/build-exe.yml">build logs</a>.</p>
+<h2>From source</h2>
+<p>Has to be run as administrator. Right-click PowerShell and choose Run as administrator first.</p>
+<pre><code>git clone https://github.com/hackmatelabs/hackmate.git
+cd hackmate
+python setup.py
+.venv\Scripts\python.exe src\hackmate.py</code></pre>
+<p>Always use <code>.venv\Scripts\python.exe</code>, not <code>python</code> or <code>uv run</code>, so all the deps are there.</p>
+<h2>USB formatting fails</h2>
+<p>Fixed in the latest update. If it still fails, format the USB as FAT32 (GPT) in Disk Management yourself, then use the <b>already formatted</b> option in hackmate.</p>
+</div></body></html>

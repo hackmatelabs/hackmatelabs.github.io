@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GUI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<a class="chapter" href="../supported-hardware/">Supported Hardware</a>
+<div class="section">Installation</div>
+<a class="chapter" href="../linux-macos/">Linux and macOS</a>
+<a class="chapter" href="../windows/">Windows</a>
+<a class="chapter active" href="./">GUI</a>
+<div class="section">Usage</div>
+<a class="chapter" href="../what-it-does/">What It Does</a>
+<a class="chapter" href="../after-install/">After Install</a>
+<div class="section">Help</div>
+<a class="chapter" href="../faq/">FAQ</a>
+</aside>
+<div class="page">
+<h1>GUI</h1>
+<h2>Tkinter</h2>
+<p>Same backend as the terminal UI with a windowed frontend. No extra deps, since tkinter ships with Python.</p>
+<pre><code>sudo .venv/bin/python3 src/hackmate_gui.py      # linux / macos
+.venv\Scripts\python.exe src\hackmate_gui.py    # windows, run powershell as administrator</code></pre>
+<h2>Flutter</h2>
+<p>A newer windowed frontend talking to the same Python backend over a JSON-RPC bridge (<code>src/bridge.py</code>). Build history, log checker, EFI health check, disk map, restore, USB mapping, config editor and the full guided/manual build wizard all work. It isn't distributed as a prebuilt exe yet, so you build it yourself.</p>
+<p>You need the <a href="https://docs.flutter.dev/get-started/install">Flutter SDK</a> plus platform build tools: Visual Studio Build Tools with the "Desktop development with C++" workload on Windows, Xcode on macOS, gtk3/clang/cmake/ninja on Linux.</p>
+<pre><code>cd hackmate/gui-flutter
+flutter pub get
+flutter run
+flutter build windows
+flutter build macos
+flutter build linux</code></pre>
+<p><b>Windows:</b> run the built exe. It prompts for admin (UAC) and the Python backend inherits that.</p>
+<p><b>Linux / macOS:</b> the app doesn't self-elevate, so launch it with sudo from a terminal.</p>
+<p class="note">Linux and macOS support was just added and has only been built and tested on Windows so far. If something's broken there, open an issue.</p>
+</div></body></html>

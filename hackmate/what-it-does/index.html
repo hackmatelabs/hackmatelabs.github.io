@@ -1,0 +1,42 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>What It Does</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<a class="chapter" href="../supported-hardware/">Supported Hardware</a>
+<div class="section">Installation</div>
+<a class="chapter" href="../linux-macos/">Linux and macOS</a>
+<a class="chapter" href="../windows/">Windows</a>
+<a class="chapter" href="../gui/">GUI</a>
+<div class="section">Usage</div>
+<a class="chapter active" href="./">What It Does</a>
+<a class="chapter" href="../after-install/">After Install</a>
+<div class="section">Help</div>
+<a class="chapter" href="../faq/">FAQ</a>
+</aside>
+<div class="page">
+<h1>What It Does</h1>
+<ol>
+<li>Scans your hardware: CPU, GPU, audio, ethernet, Wi-Fi, touchpad, NVMe, Thunderbolt.</li>
+<li>Shows which macOS versions are compatible with your exact hardware.</li>
+<li>You pick a USB drive. Internal disks are hidden so you can't wipe the wrong one.</li>
+<li>Everything after that is automated:
+<ul>
+<li>Formats the USB as FAT32 and creates the EFI structure</li>
+<li>Downloads macOS recovery straight from Apple</li>
+<li>Generates SMBIOS (serial, MLB, UUID, ROM)</li>
+<li>Generates a config.plist with the correct quirks for your hardware</li>
+<li>Downloads kexts from GitHub releases</li>
+<li>Downloads the latest OpenCore release</li>
+<li>Generates SSDTs from your actual DSDT using SSDTTime</li>
+</ul></li>
+</ol>
+<p>Kext sources are checked before the USB is formatted, so a dead download source shows up as a warning instead of a kext silently going missing.</p>
+<h2>Graphical boot picker</h2>
+<p>New EFI builds boot into the <a href="../../hackmate-core/">hackmate-core</a> graphical picker instead of OpenCore's text menu. The build screen's classic-picker option turns it off.</p>
+</div></body></html>

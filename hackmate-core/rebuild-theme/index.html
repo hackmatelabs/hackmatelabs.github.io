@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rebuild the Theme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<div class="section">Setup</div>
+<a class="chapter" href="../install/">Install</a>
+<a class="chapter" href="../styles/">Styles and Resolution</a>
+<div class="section">Development</div>
+<a class="chapter active" href="./">Rebuild the Theme</a>
+</aside>
+<div class="page">
+<h1>Rebuild the Theme</h1>
+<p><code>tools/build_theme.py</code> regenerates <code>Resources/</code>. It composites the banner over a wallpaper (blurred, darkened), redraws <code>Apple.icns</code>, tints the selection chrome, and pulls <code>Font/</code> and <code>Label/</code> from OcBinaryData.</p>
+<pre><code>python tools/build_theme.py \
+  --wallpaper /path/to/wallpaper.jpg \
+  --ocbinary  /path/to/OcBinaryData \
+  --goldengate /path/to/OcBinaryData/Resources/Image/Acidanthera/GoldenGate</code></pre>
+<p><code>--blur</code>, <code>--brightness</code> and <code>--dark</code> tune the backdrop. Edit <code>BANNER</code>, <code>SUBTITLE</code> and <code>LEGEND</code> at the top of the script for different text.</p>
+<p><code>tools/preview.py</code> renders a mockup PNG without booting anything. <code>tools/build_test_efi.py</code> plus <code>tools/qemu_shot.py</code> build a throwaway ESP and boot it in QEMU + OVMF.</p>
+<h2>Licence</h2>
+<p>MIT. Third-party assets and their licences are listed in <code>THIRD_PARTY.md</code> in the repo.</p>
+</div></body></html>

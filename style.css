@@ -20,3 +20,11 @@ div.page{margin-left:220px;padding:32px;color:#fff;font-family:'Roboto Mono',mon
 div.page h1{margin:0;font-size:32px}
 aside a.active{background:rgb(120,120,120);color:#fff}
 aside{overflow-y:auto}
+div.page p,div.page li{line-height:1.6;font-size:15px;max-width:760px}
+div.page h2{margin:28px 0 8px;font-size:20px}
+div.page a{color:rgb(190,220,255)}
+div.page code{background:rgb(70,70,70);padding:2px 6px;border-radius:4px;font-size:13px}
+div.page pre{background:rgb(35,35,35);padding:14px 16px;border-radius:8px;overflow-x:auto;max-width:760px}
+div.page pre code{background:none;padding:0}
+div.page .note{border-left:3px solid rgb(185,185,185);padding-left:12px;color:rgb(215,215,215)}
+@media(max-width:700px){aside{display:none}div.page{margin-left:0}}

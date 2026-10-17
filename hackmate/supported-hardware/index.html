@@ -1,7 +1,41 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supported Hardware</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
-</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav><aside><div class="section">Introduction</div><a class="chapter" href="../prerequisites/">Prerequisites</a><a class="chapter" href="../overview/">Overview</a><a class="chapter active" href="../supported-hardware/">Supported Hardware</a><div class="section">Installation</div><a class="chapter" href="../creating-the-usb/">Creating the USB</a><a class="chapter" href="../booting-the-installer/">Booting the Installer</a><a class="chapter" href="../installing-macos/">Installing macOS</a><a class="chapter" href="../post-install/">Post-Install</a><div class="section">Configuration</div><a class="chapter" href="../config-basics/">Config Basics</a><a class="chapter" href="../kernel-patches/">Kernel Patches</a><a class="chapter" href="../drivers/">Drivers</a><a class="chapter" href="../boot-arguments/">Boot Arguments</a><div class="section">Troubleshooting</div><a class="chapter" href="../boot-issues/">Boot Issues</a><a class="chapter" href="../graphics-issues/">Graphics Issues</a><a class="chapter" href="../kernel-panics/">Kernel Panics</a><a class="chapter" href="../faq/">FAQ</a><div class="section">About</div><a class="chapter" href="../changelog/">Changelog</a><a class="chapter" href="../credits/">Credits</a></aside><div class="page"><h1>Supported Hardware</h1></div></body></html>
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<a class="chapter active" href="./">Supported Hardware</a>
+<div class="section">Installation</div>
+<a class="chapter" href="../linux-macos/">Linux and macOS</a>
+<a class="chapter" href="../windows/">Windows</a>
+<a class="chapter" href="../gui/">GUI</a>
+<div class="section">Usage</div>
+<a class="chapter" href="../what-it-does/">What It Does</a>
+<a class="chapter" href="../after-install/">After Install</a>
+<div class="section">Help</div>
+<a class="chapter" href="../faq/">FAQ</a>
+</aside>
+<div class="page">
+<h1>Supported Hardware</h1>
+<h2>CPU generations</h2>
+<ul>
+<li>Sandy Bridge, Ivy Bridge, Haswell, Broadwell</li>
+<li>Skylake, Kaby Lake, Coffee Lake</li>
+<li>Comet Lake / Ice Lake</li>
+<li>Rocket Lake and newer desktops, with a supported AMD dGPU</li>
+<li>AMD Ryzen / Threadripper desktops</li>
+</ul>
+<p>Intel 2nd to 10th gen is the normal range. 11th gen and newer Intel Xe graphics have no macOS driver, so those desktops need a supported AMD dGPU and those laptops usually aren't viable. hackmate flags dead ends before it builds.</p>
+<h2>Laptops tested</h2>
+<p>ThinkPad T480s, T480, T470, X1 Carbon · Dell XPS 13/15 · HP EliteBook · ASUS Zenbook · Acer Aspire</p>
+<h2>Platforms</h2>
+<p>Laptops, desktops, mini-PCs.</p>
+<h2>macOS versions</h2>
+<p>Ventura, Sonoma, Sequoia, Tahoe (macOS 16).</p>
+<h2>Reference build</h2>
+<p>Built and tested on a ThinkPad T480s (i5-8350U, Intel 8265 Wi-Fi, Kaby Lake-R).</p>
+</div></body></html>

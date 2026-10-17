@@ -1,7 +1,28 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title></title>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>hackmate-core</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
-</head><body><nav><a href="../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav><aside><div class="section">Introduction</div><a class="chapter" href="prerequisites/">Prerequisites</a><a class="chapter" href="overview/">Overview</a><a class="chapter" href="supported-hardware/">Supported Hardware</a><div class="section">Installation</div><a class="chapter" href="creating-the-usb/">Creating the USB</a><a class="chapter" href="booting-the-installer/">Booting the Installer</a><a class="chapter" href="installing-macos/">Installing macOS</a><a class="chapter" href="post-install/">Post-Install</a><div class="section">Configuration</div><a class="chapter" href="config-basics/">Config Basics</a><a class="chapter" href="kernel-patches/">Kernel Patches</a><a class="chapter" href="drivers/">Drivers</a><a class="chapter" href="boot-arguments/">Boot Arguments</a><div class="section">Troubleshooting</div><a class="chapter" href="boot-issues/">Boot Issues</a><a class="chapter" href="graphics-issues/">Graphics Issues</a><a class="chapter" href="kernel-panics/">Kernel Panics</a><a class="chapter" href="faq/">FAQ</a><div class="section">About</div><a class="chapter" href="changelog/">Changelog</a><a class="chapter" href="credits/">Credits</a></aside><div class="page"><h1>hackmate-core</h1></div></body></html>
+</head><body><nav><a href="../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter active" href="./">Overview</a>
+<div class="section">Setup</div>
+<a class="chapter" href="install/">Install</a>
+<a class="chapter" href="styles/">Styles and Resolution</a>
+<div class="section">Development</div>
+<a class="chapter" href="rebuild-theme/">Rebuild the Theme</a>
+</aside>
+<div class="page">
+<h1>hackmate-core</h1>
+<p>A branded graphical boot picker for OpenCore. Instead of OpenCore's black-and-white text menu, you boot into the HackMate banner over a blurred macOS Tahoe backdrop, with a short legend for what Safe Mode / Recovery / Reset NVRAM do, mouse support and readable entry names.</p>
+<h2>It's not a fork</h2>
+<p>OpenCore is unmodified. hackmate-core is two things:</p>
+<ol>
+<li>An <b>OpenCanopy theme</b>: a <code>Resources/</code> folder with background, icons, fonts and labels. OpenCanopy is Acidanthera's own graphical picker and ships with every OpenCore release as <code>OpenCanopy.efi</code>.</li>
+<li>A few <b>config.plist keys</b> that switch the picker on and point it at the theme.</li>
+</ol>
+<p>Nothing about the boot chain, security model or update path changes. Proven on a real ThinkPad T480s (macOS 26.5.2): graphical picker at native 1920×1080, trackpad cursor, all boot entries, macOS boots through it.</p>
+<p><a href="https://github.com/hackmatelabs/hackmate-core">github.com/hackmatelabs/hackmate-core</a></p>
+</div></body></html>

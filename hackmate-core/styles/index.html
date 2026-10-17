@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Styles and Resolution</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<div class="section">Setup</div>
+<a class="chapter" href="../install/">Install</a>
+<a class="chapter active" href="./">Styles and Resolution</a>
+<div class="section">Development</div>
+<a class="chapter" href="../rebuild-theme/">Rebuild the Theme</a>
+</aside>
+<div class="page">
+<h1>Styles and Resolution</h1>
+<h2>Styles</h2>
+<ul>
+<li><b>full</b> (<code>PickerAttributes 145</code>): banner, legend, shutdown/restart buttons</li>
+<li><b>minimal</b> (<code>209</code>): same, no shutdown/restart buttons</li>
+</ul>
+<h2>Resolution</h2>
+<p><code>Background.icns</code> is centred, not stretched. Three variants ship: <code>Background.icns</code> (1080p), <code>Background_1440p.icns</code> and <code>Background_2160p.icns</code>. The <code>install</code> command with <code>--resolution</code> swaps in the right one. Otherwise rename the file yourself, or regenerate the theme. A mismatch just letterboxes against <code>DefaultBackgroundColor</code> (black).</p>
+<p>For a 4K panel also set NVRAM <code>UIScale</code> to <code>02</code>.</p>
+<h2>Notes</h2>
+<ul>
+<li>OpenCanopy's layout (icon size, row position, spacing) is fixed. A theme controls colours, images and labels only. The banner and legend live inside <code>Background.icns</code>, positioned to sit clear of the entry row.</li>
+<li>The auto-detected macOS entry currently shows the generic drive icon instead of the Apple logo. It's a flavour-resolution quirk and purely cosmetic.</li>
+</ul>
+</div></body></html>

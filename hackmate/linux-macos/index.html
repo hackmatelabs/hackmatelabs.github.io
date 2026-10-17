@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Linux and macOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<a class="chapter" href="../supported-hardware/">Supported Hardware</a>
+<div class="section">Installation</div>
+<a class="chapter active" href="./">Linux and macOS</a>
+<a class="chapter" href="../windows/">Windows</a>
+<a class="chapter" href="../gui/">GUI</a>
+<div class="section">Usage</div>
+<a class="chapter" href="../what-it-does/">What It Does</a>
+<a class="chapter" href="../after-install/">After Install</a>
+<div class="section">Help</div>
+<a class="chapter" href="../faq/">FAQ</a>
+</aside>
+<div class="page">
+<h1>Linux and macOS</h1>
+<pre><code>git clone https://github.com/hackmatelabs/hackmate.git
+cd hackmate
+python3 setup.py
+sudo .venv/bin/python3 src/hackmate.py</code></pre>
+<p class="note">Always use the full path to the venv python (<code>.venv/bin/python3</code>) with <code>sudo</code>, not <code>python3</code> or <code>uv run</code>. sudo doesn't inherit your PATH, so it won't find uv or your user-installed packages. If you got <code>sudo: uv: command not found</code>, this is why.</p>
+<h2>macOS: lspci not found</h2>
+<p>macOS is fully supported now. Pull the latest and rerun.</p>
+</div></body></html>

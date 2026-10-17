@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Install</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head><body><nav><a href="../../index.html"><span class="material-symbols-outlined">home</span><span>hackmatelabs</span></a><label class="search"><span class="material-symbols-outlined">search</span><input type="search" placeholder="search"></label></nav>
+<aside>
+<div class="section">Introduction</div>
+<a class="chapter" href="../">Overview</a>
+<div class="section">Setup</div>
+<a class="chapter active" href="./">Install</a>
+<a class="chapter" href="../styles/">Styles and Resolution</a>
+<div class="section">Development</div>
+<a class="chapter" href="../rebuild-theme/">Rebuild the Theme</a>
+</aside>
+<div class="page">
+<h1>Install</h1>
+<p>You need an existing, working OpenCore EFI.</p>
+<h2>Automatic</h2>
+<p>Patches <code>config.plist</code> and merges the theme in.</p>
+<pre><code>python hackmate_core.py install /Volumes/EFI/EFI/OC</code></pre>
+<p>Add <code>--minimal</code> for no shutdown/restart buttons, <code>--resolution 2560x1440</code> to pick the matching background, or <code>--oc-release /path/to/OpenCore-1.0.7-RELEASE</code> if <code>OpenCanopy.efi</code> isn't already in your <code>Drivers/</code> folder.</p>
+<h2>Manual</h2>
+<ol>
+<li>Copy <code>Resources/Image/HackMate/</code> into <code>EFI/OC/Resources/Image/</code>. If your <code>Resources/</code> has no <code>Font/</code> or <code>Label/</code>, copy those from the repo too.</li>
+<li>Put <code>OpenCanopy.efi</code> (from your OpenCore release, matching your <code>OpenCore.efi</code> version) in <code>EFI/OC/Drivers/</code> and add it to <code>UEFI &gt; Drivers</code> with <code>Enabled = true</code>.</li>
+<li>In <code>config.plist &gt; Misc &gt; Boot</code> set <code>PickerMode</code> to <code>External</code>, <code>PickerVariant</code> to <code>HackMate\Core</code>, and <code>PickerAttributes</code> to <code>145</code> (or <code>209</code> for minimal).</li>
+<li>Set <code>UEFI &gt; Output &gt; ProvideConsoleGop = true</code>.</li>
+</ol>
+<p>Then reboot.</p>
+</div></body></html>
