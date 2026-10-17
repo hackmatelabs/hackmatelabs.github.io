@@ -2,7 +2,7 @@ fetch("https://api.github.com/orgs/hackmatelabs/repos?per_page=100&sort=updated"
   .then(r => r.json())
   .then(repos => {
     const el = document.getElementById("repos");
-    const hide = [".github", "demo-repository", "whitepage"];
+    const hide = [".github", "demo-repository", "whitepage", "hackmatelabs.github.io"];
     for (const r of repos.filter(r => !hide.includes(r.name))) {
       const a = document.createElement("a");
       a.className = "repo";
